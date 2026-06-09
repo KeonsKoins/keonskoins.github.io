@@ -3,46 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KeonsKoins | Coins, Mint Sets & Collectibles</title>
+  <title>Keon's Koins | Canadian Coins, Mint Sets & Collectibles</title>
+  <meta name="description" content="Keon's Koins - Canadian coins, mint sets, special coins, and collectible finds. Shop our eBay store." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <nav class="navbar">
-      <div class="logo">Keons<span>Koins</span></div>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <ul class="nav-links" id="navLinks">
+      <a class="brand" href="#home">
+        <span class="coin-logo">KK</span>
+        <span>Keon's Koins</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
+
         <li class="dropdown">
-          <a href="#canadian">Canadian Coins ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Canadian Pennies</a></li>
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Canadian Nickels</a></li>
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Canadian Dimes</a></li>
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Canadian Quarters</a></li>
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Canadian Dollars</a></li>
-          </ul>
+          <button class="dropbtn">Canadian Coins ▾</button>
+          <div class="dropdown-content">
+            <a href="#canadian-cents">Canadian Cents</a>
+            <a href="#nickels-dimes">Nickels & Dimes</a>
+            <a href="#quarters">Quarters</a>
+            <a href="#loonies-toonies">Loonies & Toonies</a>
+          </div>
         </li>
+
         <li class="dropdown">
-          <a href="#mintsets">Mint Sets ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">U.S. Mint Sets</a></li>
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Proof Sets</a></li>
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Silver Proof Sets</a></li>
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Commemorative Sets</a></li>
-          </ul>
+          <button class="dropbtn">Mint Sets ▾</button>
+          <div class="dropdown-content">
+            <a href="#proof-sets">Proof Sets</a>
+            <a href="#uncirculated">Uncirculated Sets</a>
+            <a href="#commemorative">Commemorative Sets</a>
+          </div>
         </li>
+
         <li class="dropdown">
-          <a href="#special">Special Coins ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Kennedy Half Dollars</a></li>
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Error Coins</a></li>
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Silver Coins</a></li>
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Currency</a></li>
-            <li><a href="https://www.ebay.com/usr/keonskoins" target="_blank">Graded Coins</a></li>
-          </ul>
+          <button class="dropbtn">Special Coins ▾</button>
+          <div class="dropdown-content">
+            <a href="#silver">Silver Coins</a>
+            <a href="#errors">Error Coins</a>
+            <a href="#collectibles">Collector Specials</a>
+          </div>
         </li>
-        <li><a class="shop-btn" href="https://www.ebay.com/usr/keonskoins" target="_blank">Shop eBay</a></li>
+
+        <li><a href="#about">About</a></li>
+        <li><a class="shop-link" href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Shop eBay</a></li>
       </ul>
     </nav>
   </header>
@@ -50,50 +57,81 @@
   <main id="home">
     <section class="hero">
       <div class="hero-content">
-        <p class="eyebrow">Trusted coin finds • Fast eBay checkout</p>
-        <h1>Collectible Coins, Mint Sets & Special Finds</h1>
-        <p>Welcome to KeonsKoins — your source for Canadian coins, U.S. mint sets, Kennedy half dollars, silver coins, error coins, graded coins, and unique currency collectibles.</p>
+        <p class="eyebrow">Canadian Coins • Mint Sets • Collector Finds</p>
+        <h1>Premium Collectible Coins from Keon's Koins</h1>
+        <p class="hero-text">
+          Browse Canadian coins, mint sets, special coins, and unique collectible pieces.
+          New inventory is added through our eBay store.
+        </p>
         <div class="hero-actions">
-          <a class="primary" href="https://www.ebay.com/usr/keonskoins" target="_blank">Visit My eBay Store</a>
-          <a class="secondary" href="#categories">Browse Categories</a>
+          <a class="btn primary" href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Visit My eBay Store</a>
+          <a class="btn secondary" href="#categories">View Categories</a>
         </div>
       </div>
+      <div class="hero-card">
+        <div class="coin big">★</div>
+        <h2>Keon's Koins</h2>
+        <p>Collector-focused coins with clean presentation and easy shopping.</p>
+      </div>
     </section>
 
-    <section class="categories" id="categories">
-      <h2>Shop by Category</h2>
-      <div class="cards">
-        <article class="card" id="canadian">
+    <section id="categories" class="section">
+      <p class="eyebrow">Shop by category</p>
+      <h2>Featured Coin Categories</h2>
+      <div class="card-grid">
+        <article class="category-card" id="canadian-cents">
+          <div class="icon">¢</div>
           <h3>Canadian Coins</h3>
-          <p>Pennies, nickels, dimes, quarters, dollars, older dates, and collectible Canadian pieces.</p>
-          <a href="https://www.ebay.com/usr/keonskoins" target="_blank">Shop Canadian Coins</a>
+          <p>Canadian cents, nickels, dimes, quarters, loonies, toonies, and more.</p>
+          <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Shop Canadian Coins →</a>
         </article>
-        <article class="card" id="mintsets">
+
+        <article class="category-card" id="proof-sets">
+          <div class="icon">◆</div>
           <h3>Mint Sets</h3>
-          <p>U.S. Mint Sets, proof sets, silver proof sets, commemoratives, and collector packaging.</p>
-          <a href="https://www.ebay.com/usr/keonskoins" target="_blank">Shop Mint Sets</a>
+          <p>Proof sets, uncirculated sets, annual sets, and commemorative releases.</p>
+          <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Shop Mint Sets →</a>
         </article>
-        <article class="card" id="special">
+
+        <article class="category-card" id="silver">
+          <div class="icon">◎</div>
           <h3>Special Coins</h3>
-          <p>Kennedy half dollars, error coins, silver coins, graded coins, and hard-to-find collectibles.</p>
-          <a href="https://www.ebay.com/usr/keonskoins" target="_blank">Shop Special Coins</a>
+          <p>Silver coins, error coins, hard-to-find pieces, and collector specials.</p>
+          <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Shop Special Coins →</a>
         </article>
       </div>
     </section>
 
-    <section class="trust">
-      <h2>Why Buy from KeonsKoins?</h2>
-      <div class="trust-grid">
-        <div><strong>Collector Focused</strong><p>Listings made for coin collectors, stackers, and hobby buyers.</p></div>
-        <div><strong>Clear Categories</strong><p>Easy menus help shoppers quickly find what they want.</p></div>
-        <div><strong>Secure Checkout</strong><p>All purchases complete safely through eBay.</p></div>
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Why shop with us?</p>
+        <h2>Built for collectors</h2>
+        <p>
+          Keon's Koins is designed to make browsing simple and trustworthy. Use the dropdown menus
+          to jump to the categories you care about, then shop available listings through eBay.
+        </p>
       </div>
+      <div class="feature-list">
+        <div><strong>✓ Easy Navigation</strong><span>Working dropdowns and mobile menu</span></div>
+        <div><strong>✓ eBay Store Access</strong><span>Direct link to current listings</span></div>
+        <div><strong>✓ Collector Style</strong><span>Gold, silver, and premium coin styling</span></div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <p class="eyebrow">About</p>
+      <h2>About Keon's Koins</h2>
+      <p>
+        Welcome to Keon's Koins. We specialize in Canadian coins, mint sets, special coins,
+        and collectible pieces for hobbyists and collectors.
+      </p>
+      <a class="btn primary" href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Browse Current Listings</a>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 KeonsKoins. All sales handled through eBay.</p>
-    <a href="https://www.ebay.com/usr/keonskoins" target="_blank">ebay.com/usr/keonskoins</a>
+    <p>© 2026 Keon's Koins. All rights reserved.</p>
+    <p><a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">eBay Store</a></p>
   </footer>
 
   <script src="script.js"></script>
