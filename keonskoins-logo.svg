@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <defs>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff0a6"/>
+      <stop offset=".5" stop-color="#d7a642"/>
+      <stop offset="1" stop-color="#8f6420"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".5" stop-color="#cfd4da"/>
+      <stop offset="1" stop-color="#7d858f"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity=".65"/></filter>
+  </defs>
+  <rect width="900" height="360" rx="34" fill="#0d0d0f"/>
+  <ellipse cx="450" cy="180" rx="390" ry="135" fill="none" stroke="url(#gold)" stroke-width="7" opacity=".9"/>
+  <circle cx="168" cy="180" r="78" fill="url(#gold)" filter="url(#shadow)"/>
+  <circle cx="732" cy="180" r="78" fill="url(#silver)" filter="url(#shadow)"/>
+  <text x="168" y="195" text-anchor="middle" font-size="58" font-weight="900" fill="#1a1204">KK</text>
+  <path d="M690 190 C710 120 778 124 790 176 C773 153 742 151 728 187 C722 205 705 207 690 190Z" fill="#1b1d22" opacity=".9"/>
+  <path d="M244 113 C297 86 355 78 413 93 C478 110 530 88 592 103 C553 119 513 127 467 121 C384 111 318 111 244 113Z" fill="url(#gold)" opacity=".75"/>
+  <path d="M304 245 C348 211 393 201 450 204 C507 207 552 221 596 246" fill="none" stroke="url(#silver)" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  <text x="450" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="74" font-weight="900" fill="url(#gold)" filter="url(#shadow)">KEONSKOINS</text>
+  <text x="450" y="221" text-anchor="middle" font-family="Georgia, serif" font-size="26" letter-spacing="5" fill="#e8e2d2">NUMISMATIC SPECIALIST</text>
+  <text x="450" y="270" text-anchor="middle" font-family="Georgia, serif" font-size="20" letter-spacing="2" fill="#f2d27a">U.S. COINS • CURRENCY • BULLION • COLLECTIBLES</text>
+</svg>
