@@ -3,309 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KeonsKoins | U.S. Coins, Currency, Bullion & Collectibles</title>
-  <meta name="description" content="KeonsKoins specializes in U.S. coins, graded coins, copper, bullion, currency, coin roll hunting, collector supplies, and custom copper commemoratives." />
-  <link rel="stylesheet" href="style.css" />
+  <title>KeonsKoins | America's Collector Marketplace</title>
+  <meta name="description" content="KeonsKoins is a collector-focused marketplace for U.S. coins, bankrolls, mint sets, proof sets, bullion, currency, and estate collections." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header class="site-header">
+    <div class="top-strip">
+      <span>America's Collector Marketplace</span>
+      <span>Join the Collector Club for 10% off your first purchase</span>
+    </div>
     <nav class="navbar">
       <a class="brand" href="#home" aria-label="KeonsKoins home">
-        <span class="brand-emblem">
-          <span class="eagle">★</span>
-          <span class="horse">♞</span>
-        </span>
-        <span class="brand-text">KeonsKoins</span>
+        <span class="eagle-mark">🦅</span>
+        <span class="brand-text">Keons<span>Koins</span></span>
+        <span class="badge-250">250</span>
       </a>
-
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-
-        <li class="dropdown">
-          <button class="dropbtn">U.S. Coins ▾</button>
-          <div class="dropdown-content">
-            <a href="#graded">Graded Coins</a>
-            <a href="#winner">Morgan Dollars</a>
-            <a href="#commemoratives">Commemoratives</a>
-            <a href="#bullion">Silver Eagles</a>
-          </div>
-        </li>
-
-        <li class="dropdown">
-          <button class="dropbtn">Series ▾</button>
-          <div class="dropdown-content">
-            <a href="#coin-hunter">Coin Hunter Series</a>
-            <a href="#turf">Turf Series</a>
-            <a href="#copper">Copper Corner</a>
-            <a href="#custom">Custom Copper</a>
-          </div>
-        </li>
-
-        <li><a href="#tack-room">The Tack Room</a></li>
-        <li><a href="#world">World Coins</a></li>
-        <li><a class="shop-link" href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Shop eBay</a></li>
-      </ul>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="#shop">Shop Coins</a>
+        <a href="#roll-vault">Roll Vault</a>
+        <a href="#collector-sets">Collector Sets</a>
+        <a href="#we-buy">We Buy</a>
+        <a href="#bullion">Bullion</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
   </header>
 
   <main id="home">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">U.S. Coins • Currency • Bullion • Collector Gear</p>
-        <h1>Premium U.S. Coins, Currency & Collectibles</h1>
-        <p class="hero-text">
-          Morgan Dollars, Silver Eagles, PCGS & NGC graded coins, copper bullion, currency treasures,
-          coin roll hunting packages, and collector supplies.
-        </p>
-        <div class="hero-badges">
-          <span>PCGS</span><span>NGC</span><span>CAC</span><span>U.S. Mint</span>
-        </div>
+        <p class="eyebrow">Coins • Bullion • Currency • Collections</p>
+        <h1>Build your collection with confidence.</h1>
+        <p class="hero-text">KeonsKoins brings collectors hand-picked U.S. coins, bankrolls, mint sets, proof sets, graded coins, bullion, and fresh eBay inventory in one professional collector hub.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Visit eBay Store</a>
-          <a class="btn secondary" href="#winner">Explore Winner's Circle</a>
+          <a class="btn primary" href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Shop eBay Store</a>
+          <a class="btn secondary" href="#we-buy">Sell Your Collection</a>
+          <a class="btn ghost" href="#club">Join Collector Club</a>
         </div>
       </div>
+      <div class="hero-card">
+        <div class="coin-stack">✦</div>
+        <h2>New Arrivals</h2>
+        <p>Fresh rolls, collector sets, and standout pieces added regularly.</p>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">View latest listings →</a>
+      </div>
+    </section>
 
-      <div class="hero-feature">
-        <img src="assets/hero-eagle.jpg" alt="NGC MS70 American Silver Eagle" />
-        <div class="feature-caption">
-          <strong>Featured Hero</strong>
-          <span>NGC MS70 American Silver Eagle</span>
+    <section id="bullion" class="ticker-section">
+      <div class="section-heading">
+        <p class="eyebrow">Live-style Market Center</p>
+        <h2>Today's Bullion Prices</h2>
+        <p>This ticker is ready for a live API/widget connection. For now, it shows a professional preview layout with a refresh timestamp.</p>
+      </div>
+      <div class="ticker-wrap" aria-label="Bullion price ticker">
+        <div class="ticker-track">
+          <span><strong>Gold</strong> <em data-metal="gold">Loading</em></span>
+          <span><strong>Silver</strong> <em data-metal="silver">Loading</em></span>
+          <span><strong>Platinum</strong> <em data-metal="platinum">Loading</em></span>
+          <span><strong>Palladium</strong> <em data-metal="palladium">Loading</em></span>
+          <span><strong>Updated</strong> <em id="lastUpdated">Loading</em></span>
         </div>
       </div>
-    </section>
-
-    <section class="section intro-grid">
-      <article class="mini-card">
-        <span class="mini-icon">🏆</span>
-        <h3>Winner's Circle</h3>
-        <p>Featured graded coins, Morgan Dollars, Silver Eagles, and standout collector pieces.</p>
-      </article>
-      <article class="mini-card">
-        <span class="mini-icon">🏇</span>
-        <h3>Coin Hunter Series</h3>
-        <p>Race-themed roll hunting packages for beginners, families, and serious searchers.</p>
-      </article>
-      <article class="mini-card">
-        <span class="mini-icon">🌱</span>
-        <h3>Turf Series</h3>
-        <p>Currency treasures including star notes, fancy serials, silver certificates, and error notes.</p>
-      </article>
-      <article class="mini-card">
-        <span class="mini-icon">🛒</span>
-        <h3>The Tack Room</h3>
-        <p>Flips, slabs, scales, stands, holders, books, and supplies for every collector.</p>
-      </article>
-    </section>
-
-    <section id="winner" class="section">
-      <p class="eyebrow">Featured Inventory</p>
-      <h2>🏆 Winner's Circle Picks</h2>
-      <div class="product-grid four">
-        <article class="product-card">
-          <img src="assets/eagle-cac.jpg" alt="2025 NGC MS70 CAC American Silver Eagle" />
-          <h3>2025 Silver Eagle MS70 CAC</h3>
-          <p>Certified modern silver with high-grade collector appeal.</p>
-          <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">View on eBay →</a>
-        </article>
-        <article class="product-card">
-          <img src="assets/morgan-1901.jpg" alt="1901-O Morgan Dollar" />
-          <h3>1901-O Morgan Dollar</h3>
-          <p>A classic New Orleans Mint Morgan Dollar for U.S. coin collectors.</p>
-          <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">View on eBay →</a>
-        </article>
-        <article class="product-card">
-          <img src="assets/wtc-eagle.jpg" alt="WTC Ground Zero Recovery Silver Eagle" />
-          <h3>Ground Zero Recovery Eagle</h3>
-          <p>A Silver Eagle with a powerful historical connection.</p>
-          <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">View on eBay →</a>
-        </article>
-        <article class="product-card">
-          <img src="assets/wwii-half.jpg" alt="World War II Veterans Half Dollar" />
-          <h3>WWII Veterans Half Dollar</h3>
-          <p>A commemorative issue with story, history, and display appeal.</p>
-          <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">View on eBay →</a>
-        </article>
+      <div class="market-cards">
+        <article><h3>Silver Melt Calculator</h3><p>Future upgrade: calculate melt value by coin type and quantity.</p></article>
+        <article><h3>Gold Melt Calculator</h3><p>Future upgrade: calculate gold coin and bullion melt value.</p></article>
+        <article><h3>Market Alerts</h3><p>Collector Club members can receive bullion and inventory updates.</p></article>
       </div>
     </section>
 
-    <section id="graded" class="section split-panel">
+    <section id="shop" class="category-grid">
+      <div class="section-heading">
+        <p class="eyebrow">Browse The Shop</p>
+        <h2>Collector Categories</h2>
+      </div>
+      <div class="grid">
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Lincoln Cents</a>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Nickels</a>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Dimes</a>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Quarters</a>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Half Dollars</a>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Dollars</a>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Graded Coins</a>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Bullion</a>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Mint Sets</a>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Proof Sets</a>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Currency</a>
+        <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Coin Supplies</a>
+      </div>
+    </section>
+
+    <section id="roll-vault" class="feature-split dark">
       <div>
-        <p class="eyebrow">Certified Inventory</p>
-        <h2>⭐ Graded Coins</h2>
-        <p>
-          KeonsKoins features a mix of raw and certified inventory, including PCGS, NGC,
-          CAC-approved coins, Silver Eagles, Morgan Dollars, and key collector pieces.
-        </p>
-        <ul class="check-list">
-          <li>PCGS & NGC certified coins</li>
-          <li>MS70 Silver Eagles</li>
-          <li>Morgan Dollars and classic U.S. coins</li>
-          <li>Collector-focused presentation</li>
-        </ul>
+        <p class="eyebrow">The Roll Vault</p>
+        <h2>Bankrolls, BU rolls, shotgun rolls, and customer favorites.</h2>
+        <p>Built for collectors who love searching, stacking, and completing date runs. This section can later be tied directly to live eBay categories.</p>
       </div>
-      <img class="panel-img" src="assets/hero-eagle.jpg" alt="Certified American Silver Eagle" />
-    </section>
-
-    <section id="coin-hunter" class="section feature-band">
-      <div class="band-image">
-        <img src="assets/coin-hunter.jpg" alt="Coin roll hunting packages" />
-      </div>
-      <div class="band-copy">
-        <p class="eyebrow">Roll Hunt Packages</p>
-        <h2>🏇 Coin Hunter Series</h2>
-        <p>
-          Experience the thrill of the hunt with race-themed roll packages built for new collectors,
-          families, and serious searchers.
-        </p>
-        <div class="tier-list">
-          <span>Claiming Package</span>
-          <span>Allowance Package</span>
-          <span>Stakes Race Package</span>
-          <span>Grade III Stakes</span>
-          <span>Grade II Stakes</span>
-          <span>Grade I Stakes</span>
-          <span>Triple Crown Winner</span>
-        </div>
-        <small>Rolls are sold for the enjoyment of searching. No specific finds are guaranteed.</small>
+      <div class="package-list">
+        <div><strong>Claiming Package</strong><span>Starter roll bundle</span></div>
+        <div><strong>Allowance Package</strong><span>Collector roll bundle</span></div>
+        <div><strong>Stakes Package</strong><span>Premium roll bundle</span></div>
+        <div><strong>Triple Crown Box</strong><span>Full BU box option</span></div>
       </div>
     </section>
 
-    <section id="turf" class="section">
-      <p class="eyebrow">Currency Treasure Hunting</p>
-      <h2>🌱 Turf Series</h2>
-      <div class="product-grid">
-        <article class="product-card">
-          <img src="assets/turf-star.jpg" alt="$100 star note" />
-          <h3>Star Notes</h3>
-          <p>Replacement notes and high-denomination currency finds.</p>
-        </article>
-        <article class="product-card">
-          <img src="assets/turf-ladder.jpg" alt="Broken ladder note" />
-          <h3>Fancy Serials</h3>
-          <p>Broken ladders, birth notes, repeaters, radars, and more.</p>
-        </article>
-        <article class="product-card">
-          <img src="assets/turf-silver-cert.jpg" alt="1935-C Silver Certificate" />
-          <h3>Historic Currency</h3>
-          <p>Silver certificates, red seals, older notes, and collectible paper money.</p>
-        </article>
+    <section id="collector-sets" class="cards-section">
+      <div class="section-heading">
+        <p class="eyebrow">Collector Favorites</p>
+        <h2>Featured Departments</h2>
+      </div>
+      <div class="cards">
+        <article><h3>Collector Sets</h3><p>Birth year sets, date sets, type sets, and gift-ready coin groups.</p></article>
+        <article><h3>Coin Hunter</h3><p>Looking for a specific date, mint mark, roll, or variety? Send a want list.</p></article>
+        <article><h3>Finish Line Specials</h3><p>Clearance deals, limited-time offers, and racing-themed weekly specials.</p></article>
       </div>
     </section>
 
-    <section id="copper" class="section">
-      <p class="eyebrow">Copper Bullion & Rounds</p>
-      <h2>🥉 Copper Corner</h2>
-      <div class="product-grid">
-        <article class="product-card">
-          <img src="assets/copper-cube.jpg" alt="5 oz copper cube" />
-          <h3>5 oz Copper Cube</h3>
-          <p>A bold copper bullion piece for collectors and stackers.</p>
-        </article>
-        <article class="product-card">
-          <img src="assets/copper-morgan.jpg" alt="Morgan design copper round" />
-          <h3>Morgan Copper Round</h3>
-          <p>Classic Morgan Dollar styling in collectible copper.</p>
-        </article>
-        <article class="product-card">
-          <img src="assets/copper-indian.jpg" alt="Indian Head copper round" />
-          <h3>Indian Head Copper Round</h3>
-          <p>A tribute to classic U.S. coin design in pure copper.</p>
-        </article>
+    <section id="we-buy" class="we-buy">
+      <div class="we-buy-copy">
+        <p class="eyebrow">We Buy</p>
+        <h2>Sell coins, collections, estates, and bullion.</h2>
+        <p>KeonsKoins is looking to buy U.S. coins, silver, gold, rolls, mint/proof sets, graded coins, currency, and estate collections. Fast communication, fair offers, and collector-focused service.</p>
+        <a class="btn primary" href="mailto:keonskoins@gmail.com?subject=Collection%20Offer%20for%20KeonsKoins">Start a Sell Inquiry</a>
+      </div>
+      <div class="buy-list">
+        <span>Coins</span><span>Collections</span><span>Estates</span><span>Bullion</span><span>Currency</span><span>Proof Sets</span>
       </div>
     </section>
 
-    <section id="bullion" class="section dark-callout">
-      <p class="eyebrow">Silver • Copper • Gold Future</p>
-      <h2>🥈 Bullion Vault</h2>
-      <p>
-        Silver Eagles, copper bars, copper rounds, silver bars, and future premium bullion selections.
-      </p>
-    </section>
-
-    <section id="tack-room" class="section">
-      <p class="eyebrow">Collector Supplies</p>
-      <h2>🛒 The Tack Room</h2>
-      <p>Everything a collector needs to protect, organize, display, and enjoy the collection.</p>
-      <div class="product-grid four">
-        <article class="product-card">
-          <img src="assets/supplies-flips.jpg" alt="2x2 coin flips" />
-          <h3>2x2 Coin Flips</h3>
-          <p>Essential protection for raw coins and starter kits.</p>
-        </article>
-        <article class="product-card">
-          <img src="assets/supplies-scale.jpg" alt="Digital coin scale" />
-          <h3>Digital Scales</h3>
-          <p>Helpful tools for bullion, copper, and collector checks.</p>
-        </article>
-        <article class="product-card">
-          <img src="assets/supplies-stands.jpg" alt="Coin display stands" />
-          <h3>Display Stands</h3>
-          <p>Showcase favorite coins, slabs, and keepsakes.</p>
-        </article>
-        <article class="product-card">
-          <img src="assets/supplies-flips.jpg" alt="Collector starter supplies" />
-          <h3>Starter Kits</h3>
-          <p>Beginner, copper, graded coin, silver, and young collector kits.</p>
-        </article>
+    <section id="club" class="club">
+      <div class="section-heading">
+        <p class="eyebrow">Collector Club</p>
+        <h2>Member pricing is coming soon.</h2>
+        <p>Visitors can browse freely. Price access and first-purchase discounts can be tied to a Collector Club signup when the store system is ready.</p>
       </div>
-    </section>
-
-    <section id="custom" class="section split-panel">
-      <div>
-        <p class="eyebrow">Personalized Keepsakes</p>
-        <h2>🔨 Custom Copper Coin Studio</h2>
-        <p>
-          Turn your special occasion into a collectible with custom copper commemoratives for weddings,
-          anniversaries, retirements, businesses, clubs, horse-racing groups, memorials, and special events.
-        </p>
-        <a class="btn primary" href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Request a Custom Design</a>
-      </div>
-      <img class="panel-img" src="assets/copper-morgan.jpg" alt="Custom copper coin concept" />
-    </section>
-
-    <section id="world" class="section">
-      <p class="eyebrow">Around the World</p>
-      <h2>🌍 World Coins & Currency</h2>
-      <div class="product-grid">
-        <article class="product-card">
-          <img src="assets/world-canada-note.jpg" alt="World currency sample" />
-          <h3>World Currency</h3>
-          <p>Foreign notes, starter packs, and collectible world currency.</p>
-        </article>
-        <article class="product-card">
-          <img src="assets/morgan-1921.jpg" alt="Classic U.S. coin placeholder" />
-          <h3>World Coin Lots</h3>
-          <p>Mixed foreign coin lots and beginner-friendly world collections.</p>
-        </article>
-        <article class="product-card">
-          <img src="assets/turf-silver-cert.jpg" alt="Collector currency starter pack" />
-          <h3>Starter Collections</h3>
-          <p>Affordable packs for new collectors, kids, gifts, and homeschool projects.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="about" class="section about">
-      <p class="eyebrow">Beyond the Collection</p>
-      <h2>A Collector Brand with a Racing Spirit</h2>
-      <p>
-        KeonsKoins was founded on a passion for collecting, history, and the excitement of discovering
-        something special. From the Winner's Circle to the Turf, the goal is simple: help collectors
-        enjoy the thrill of the hunt.
-      </p>
-      <a class="btn primary" href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Shop Current Listings</a>
+      <form class="signup" action="mailto:keonskoins@gmail.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="Enter your email" aria-label="Email address" />
+        <button type="submit">Join for 10% Off</button>
+      </form>
     </section>
   </main>
 
-  <footer>
-    <strong>KeonsKoins</strong>
-    <p>From the Winner's Circle to the Turf — Discover the Thrill of the Hunt.</p>
-    <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">Visit eBay Store</a>
+  <footer id="contact" class="footer">
+    <div>
+      <strong>KeonsKoins</strong>
+      <p>Coins, bullion, currency, bankrolls, mint sets, proof sets, and collector services.</p>
+    </div>
+    <div class="socials">
+      <a href="https://www.ebay.com/usr/keonskoins" target="_blank" rel="noopener">eBay</a>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">TikTok</a>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
